@@ -380,12 +380,12 @@ class NavEngine : public mrpt::system::COutputLogger
                 return 1e6;
             else
                 return mrpt::system::timeDifference(
-                    timeLastAlignCmd_, mrpt::Clock::now());
+                    timeLastAlignCmd_, mrpt::system::now());
         }
         void setAsAligningNow()
         {
             isAligning_       = true;
-            timeLastAlignCmd_ = mrpt::Clock::now();
+            timeLastAlignCmd_ = mrpt::system::now();
         }
         void setAsAligningNowAfterOvershoot()
         {
